@@ -174,6 +174,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,6 +240,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +260,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyeShop.Core\MyeShop.Core.csproj">
+      <Project>{05f171e1-4389-4b40-ba1f-e821a3f0eaf3}</Project>
+      <Name>MyeShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyeShop.DataAccess.InMemory\MyeShop.DataAccess.InMemory.csproj">
+      <Project>{1afc8329-e1f5-4b1e-bb7e-b427d236cbf9}</Project>
+      <Name>MyeShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyeShop.DataAccess.SQL\MyeShop.DataAccess.SQL.csproj">
+      <Project>{bae94612-ff68-4205-8d3c-0594939e72fb}</Project>
+      <Name>MyeShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyeShop.Library\MyeShop.Services.csproj">
+      <Project>{49409187-af6e-46e2-a28b-76efc405ba54}</Project>
+      <Name>MyeShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
