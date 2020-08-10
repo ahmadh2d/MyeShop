@@ -1,4 +1,5 @@
-﻿using MyeShop.Core.Models;
+﻿using MyeShop.Core.Contracts;
+using MyeShop.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Runtime.Caching;
 
 namespace MyeShop.DataAccess.InMemory
 {
-	public class InMemoryRepository<T> where T : BaseEntity
+	public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
 	{
 		MemoryCache cache = MemoryCache.Default;
 		List<T> items;
