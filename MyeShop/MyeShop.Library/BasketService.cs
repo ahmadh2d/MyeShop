@@ -103,7 +103,7 @@ namespace MyeShop.Library
 			}
 		}
 
-		public List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext, string productId)
+		public List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext)
 		{
 			Basket basket = GetBasket(httpContext, false);
 			var result = (from b in basket.BasketItems
