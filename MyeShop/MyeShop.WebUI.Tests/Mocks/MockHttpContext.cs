@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -12,6 +13,7 @@ namespace MyeShop.WebUI.Tests.Mocks
 		private MockHttpRequest request;
 		private MockHttpResponse response;
 		private HttpCookieCollection cookies;
+		private IPrincipal FakeUser;
 
 		public MockHttpContext()
 		{
@@ -25,6 +27,19 @@ namespace MyeShop.WebUI.Tests.Mocks
 			get
 			{
 				return request;
+			}
+		}
+
+		public override IPrincipal User 
+		{
+			get
+			{
+				return FakeUser;
+			}
+
+			set
+			{
+				FakeUser = value;
 			}
 		}
 
