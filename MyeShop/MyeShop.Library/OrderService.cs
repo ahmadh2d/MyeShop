@@ -30,10 +30,27 @@ namespace MyeShop.Library
 					Quantity = item.Quantity,
 					image = item.Image
 				});
-
-				OrderContext.Insert(baseOrder);
-				OrderContext.Commit();
 			}
+
+			OrderContext.Insert(baseOrder);
+			OrderContext.Commit();
+		}
+
+		public List<Order> GetOrderList()
+		{
+			return OrderContext.Collection().ToList();
+		}
+
+		public Order GetOrder(string Id)
+		{
+			Order order = OrderContext.Find(Id);
+			return order;
+		}
+
+		public void UpdateOrder(Order updatedOrder)
+		{
+			OrderContext.Update(updatedOrder);
+			OrderContext.Commit();
 		}
 	}
 }

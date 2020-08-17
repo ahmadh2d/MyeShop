@@ -21,6 +21,6 @@ namespace MyeShop.Core.Models
 		public string Street { get; set; }
 		public string ZipCode { get; set; }
 		public string OrderStatus { get; set; }
-		public ICollection<OrderItem> OrderItems { get; set; }
+		public virtual ICollection<OrderItem> OrderItems { get; set; }
 	}
 }

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MyeShop.WebUI.Controllers
 {
+	[Authorize(Roles = "Admin")]
 	public class ProductCategoryManagerController : Controller
 	{
 		// GET: ProductCategoryManager
